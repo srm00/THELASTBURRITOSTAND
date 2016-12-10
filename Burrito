@@ -9,7 +9,7 @@ public class Burrito {
 		
 		for(int i = 0; i<choices.length(); i++)
 		{
-		priceHeap.insert(this.getPrice(choices[i])); //cookedBurrito is the completed array of Strings of what the customer wanted (w/out blanks)
+		priceHeap.insert(this.getPrice(choices[i])); 
 		}
 		
 		price = priceHeap.deleteMax(); 
