@@ -1,13 +1,15 @@
 
 public class Burrito {
+		private String[] choices;
 	
 	
 	public double calcPrice()
 	{
+		
 		double price = 0; 
 		MaxHeap1 priceHeap = new MaxHeap1(8);
 		
-		for(int i = 0; i<choices.length(); i++)
+		for(int i = 0; i<choices.length; i++)
 		{
 		priceHeap.insert(this.getPrice(choices[i])); 
 		}
@@ -16,9 +18,23 @@ public class Burrito {
 		price = price + priceHeap.deleteMax(); 
 	    price = price + priceHeap.deleteMax();
 		
-		
+
 		return price; 
 	}
-
+	
+	//"Cooking" the burrito--> adding it to a new string without blanks("none") 
+	//The returned string array should become the choices array for what the customer wanted
+	public String[] cook(String[] a) 
+	{
+		int count = 0;
+		String cookedBurrito[] = new String[7];
+		for(int i = 0; i< a.length; i++)
+			{
+				if(!a[i].equals("none")) //if a[i] is not none 
+				{
+					cookedBurrito[count] = a[i];
+					count++;
+				}
+			}
 	
 }
