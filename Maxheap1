@@ -89,11 +89,15 @@ public class MaxHeap1 {
 	   
 	    public int deleteMax( )
 	    {
-	 
+	    	if(array[1]!=0)
+	    	{
 	    	int popped = findMax();
 	        array[1] = array[currentSize--]; 
 	        percolateDown(1);
 	        return popped;
+	    	}
+	    	else
+	    		return 0; 
 	    }
 
 
