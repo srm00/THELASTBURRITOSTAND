@@ -34,7 +34,7 @@ public class BurritoStand {
 	}
 	
 	public static void takeOrder(){
-		
+		Order Order1 = new Order(); 
 	}
 	
 	public static void makeOrder(){
