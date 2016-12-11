@@ -34,7 +34,7 @@ public class BurritoStand {
 	}
 	
 	public static void takeOrder(){
-		
+		//Asks number of Burritos and the initializes the BurritoList[] as an array of Burritos of that size.
 	}
 	
 	public static void makeOrder(){
