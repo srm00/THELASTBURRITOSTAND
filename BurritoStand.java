@@ -48,10 +48,19 @@ public class BurritoStand {
 			
 	}
 	
-	public static void makeOrder(burrito[] list){
-		
-		
-	}
+	public burrito[] cook(burrito[] a) 
+		{
+			int count = 0;
+			String cookedBurrito[] = new String[7];
+			for(int i = 0; i< a.length; i++)
+			{
+				if(!a[i].equals("none")) //if a[i] is not none 
+				{
+					cookedBurrito[count] = a[i];
+					count++;
+				}
+			}
+		}
 	
 	public static void checkout(){
 		
