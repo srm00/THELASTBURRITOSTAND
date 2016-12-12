@@ -1,14 +1,13 @@
-
 public class Burrito {
 		private String[] choices;
 		private double price;
 		
 	
-	//default Contstructor 
+	//default Constructor 
 	public Burrito()
 	{
 		price = 0; 
-		choices = ""; 
+		choices[0] = ""; 
 		
 	}
 	
@@ -33,7 +32,7 @@ public class Burrito {
 	
 	//"Cooking" the burrito--> adding it to a new string without blanks("none") 
 	//The returned string array should become the choices array for what the customer wanted
-	public String[] cook(String[] a) 
+	public String[] cook(Order[] a) 
 	{
 		int count = 0;
 		String cookedBurrito[] = new String[7];
@@ -46,4 +45,5 @@ public class Burrito {
 				}
 			}
 	
+    }
 }
