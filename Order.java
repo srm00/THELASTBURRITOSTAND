@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Order {
 	public String customerName;
-	public Burrito[] burritoList;
-	public int orderNumber;
-	public int totalPrice;
+	//public Burrito[] burritoList;  <---------------do we need these?
+	//public int orderNumber;
+	//public int totalPrice;  //calc price is within burrito 
 	
 	public void takeOrder(){
 		Scanner reader = new Scanner(System.in);
