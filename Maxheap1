@@ -4,8 +4,6 @@ public class MaxHeap1 {
 		private int currentSize; 
 		private int maximum; 
 		
-
-	  
 	    public MaxHeap1( int capacity )
 	    {
 	        this.maximum = capacity;
@@ -13,9 +11,6 @@ public class MaxHeap1 {
 	        array = new int[this.maximum + 1];
 	        array[0] = Integer.MAX_VALUE;
 	     }
-	    
-
-	    
 	    
 	  //Private helper methods 
 	    private int parent(int position)
@@ -31,8 +26,7 @@ public class MaxHeap1 {
 	    	return (2*position)+1; 
 	    }
 	    
-	    
-	    
+	   
 	    //method to check if something is a leaf node 
 	    private boolean isLeaf(int position)
 	    {
@@ -43,8 +37,7 @@ public class MaxHeap1 {
 	        return false;
 	    }
 	 
-	    
-	    
+	   
 	    //helper swap method
 	    private void swap(int first, int second)
 	    {
@@ -99,7 +92,6 @@ public class MaxHeap1 {
 	    	else
 	    		return 0; 
 	    }
-
 
 	    
 	    //Basic print which prints parent and right and left child in a row
