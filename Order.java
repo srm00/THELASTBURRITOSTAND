@@ -1,12 +1,52 @@
+
 import java.util.Scanner;
 
 public class Order {
+	
+	
 	public String customerName;
 	//public Burrito[] burritoList;  <---------------do we need these?
 	//public int orderNumber;
 	//public int totalPrice;  //calc price is within burrito 
 	
-	public void takeOrder(){
+	
+	public void getOrder(){
+		Scanner reader = new Scanner(System.in); 
+		
+		//Asks number of Burritos and the initializes the BurritoList[] as an array of Burritos of that size.
+		int numBurritos = 0;
+		System.out.println("How many burritos would you like?");
+		numBurritos = reader.nextInt(); 
+		Order [] customerOrder = new Order[numBurritos];//This array of burritos will contain all the burritos the customer wants
+			
+		for(int i = 0; i <= numBurritos; i++)
+		{
+			
+			Order x = new Order();
+			x.takeOrder(); //Calls the Order class to figure out which ingredients the customer wants; 
+			totOrder[i] = cook(x); 
+			//print the order
+			System.out.println("Here is this completed burrito. It contains the following ingredients: "); 
+			printBurrito(x); 
+		}
+	}
+	
+	//calculates the prices for all ordered burriots 
+	//uses the calc price method within order
+		public static void checkout(Burrito[] a){
+			double totalPrice = 0.0; 
+			for(int i = 0; i< a.length; i++)
+			{
+				totalPrice = totalPrice + a[i].calcPrice();
+			}
+			System.out.println("Your total is " + totalPrice + "$. Thank you for coming!"); 
+		}
+	
+	
+	
+	
+	
+	private void takeOrder(){
 		Scanner reader = new Scanner(System.in);
 		String customerWants[] = new String[7]; //String ("Queue") of ingredients the customer wants
 		
