@@ -62,7 +62,12 @@ public class BurritoStand {
 			}
 		}
 	
-	public static void checkout(){
-		
+	public static void checkout(burrito[] a){
+		double totalPrice = 0.0; 
+		for(int i = 0; i< a.length; i++)
+		{
+			totalPrice = totalPrice + a[i].calcPrice();
+		}
+		System.out.println("Your total is " + totalPrice + "$. Thank you for coming!"); 
 	}
 }
