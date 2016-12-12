@@ -35,6 +35,16 @@ public class BurritoStand {
 	
 	public static void takeOrder(){
 		//Asks number of Burritos and the initializes the BurritoList[] as an array of Burritos of that size.
+		int numBurritos = 0;
+		System.out.println("How many burritos would you like?");
+		numBurritos = reader.next(); 
+			
+		for(int i = 0; i <= numBurritos; i++)
+		{
+			Burrito i = newBurrito();
+			burrito.order(); 
+		}
+			
 	}
 	
 	public static void makeOrder(){
