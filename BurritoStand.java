@@ -1,16 +1,17 @@
+
 public class BurritoStand {
 	
 	   //Keeps track of all orders, Takes Orders, Modifies and manipulates all other classes
 	public static void main(String[] args){
-		BurritoStand s1 = new BurritoStand();
-		s1.getOrder(); 
-		s1.checkout(); 
+		Order o1 = new Order(); 
+		o1.getOrder(); 
+		//o1.checkout(); 
 	
 		
 		
 		//Ingredient List
 		Ingredient wheat = new Ingredient("Wheat", 1.0);
-		Ingredient white = new Ingredietns("White", 0.5);
+		Ingredient white = new Ingredient("White", 0.5);
 		Ingredient bowl = new Ingredient("Bowl", 0.3); 
 		Ingredient chicken = new Ingredient("Chicken", 4.0); 
 		Ingredient pork = new Ingredient("Pork", 5.0); 
@@ -19,10 +20,10 @@ public class BurritoStand {
 		Ingredient carneAsada = new Ingredient("Carne Asada", 5.0);
 		Ingredient vegetables = new Ingredient("Vegetables", 3.5); 
 		Ingredient whiteRice = new Ingredient("Whte Rice", 1.10);
-		Ingredietns brownRice = new Ingredient("Brown Rice", 1.5); 
+		Ingredient brownRice = new Ingredient("Brown Rice", 1.5); 
 		Ingredient blackBeans = new Ingredient("Black Beans", 1.0);
 		Ingredient pintoBeans = new Ingredient("Pinto Beans", 1.0); 
-		Ingredietns refriedBeans = new Ingredient("Refried Beans", 1.0); 
+		Ingredient refriedBeans = new Ingredient("Refried Beans", 1.0); 
 		Ingredient picoDeGallo = new Ingredient("Pico de gallo", 0.4); 
 		Ingredient mild = new Ingredient("Mild", 0.4); 
 		Ingredient medium = new Ingredient("Medium", 0.4); 
@@ -35,37 +36,11 @@ public class BurritoStand {
 		Ingredient cheese = new Ingredient("Cheese" , 0.90); 
 	}
 	
-	public static void getOrder(){
-		//Asks number of Burritos and the initializes the BurritoList[] as an array of Burritos of that size.
-		int numBurritos = 0;
-		System.out.println("How many burritos would you like?");
-		numBurritos = reader.next(); 
-		Order [] customerOrder = new Order[numBurritos];//This array of burritos will contain all the burritos the customer wants
-			
-		for(int i = 0; i <= numBurritos; i++)
-		{
-			int x = i;
-			Order x = new Order();
-			x.takeOrder(); //Calls the Order class to figure out which ingredients the customer wants; 
-			totOrder[i] = cook(x); 
-			//print the order
-			System.out.println("Here is this completed burrito. It contains the following ingredients: "); 
-			printBurrito(x); 
-		}
-	}
+
 	
 	
 	
-	//calculates the prices for all ordered burriots 
-	//uses the calc price method within order
-	public static void checkout(burrito[] a){
-		double totalPrice = 0.0; 
-		for(int i = 0; i< a.length; i++)
-		{
-			totalPrice = totalPrice + a[i].calcPrice();
-		}
-		System.out.println("Your total is " + totalPrice + "$. Thank you for coming!"); 
-	}
+	
 	
 	
 	
