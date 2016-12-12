@@ -38,16 +38,18 @@ public class BurritoStand {
 		int numBurritos = 0;
 		System.out.println("How many burritos would you like?");
 		numBurritos = reader.next(); 
+		Burrito [] totOrder = new Burrito[numBurritos];//This array of burritos will contain all the burritos the customer wants
 			
 		for(int i = 0; i <= numBurritos; i++)
 		{
 			Burrito i = new Burrito();
-			i.order(); 
+			totOrder[i] = i.order(); //Calls the Order class to figure out which ingredients the customer wants; 
 		}
 			
 	}
 	
-	public static void makeOrder(){
+	public static void makeOrder(burrito[] list){
+		
 		
 	}
 	
