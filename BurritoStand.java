@@ -43,25 +43,13 @@ public class BurritoStand {
 		for(int i = 0; i <= numBurritos; i++)
 		{
 			Burrito i = new Burrito();
-			totOrder[i] = i.order(); //Calls the Order class to figure out which ingredients the customer wants; 
+			i.order(); //Calls the Order class to figure out which ingredients the customer wants; 
+			totOrder[i] = cook(i.order()); //<------------------- Which???
 		}
 			
 	}
 	
-	//"Cooks" the burritos by removing all blanks within the array
-	public burrito[] cook(burrito[] a) 
-		{
-			int count = 0;
-			String cookedBurrito[] = new String[7];
-			for(int i = 0; i< a.length; i++)
-			{
-				if(!a[i].equals("none")) //if a[i] is not none 
-				{
-					cookedBurrito[count] = a[i];
-					count++;
-				}
-			}
-		}
+	
 	
 	//calculates the prices for all ordered burriots 
 	//uses the calc price method within order
