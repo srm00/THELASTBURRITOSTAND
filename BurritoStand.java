@@ -1,9 +1,11 @@
 public class BurritoStand {
 	
+	   //Keeps track of all orders, Takes Orders, Modifies and manipulates all other classes
 	public static void main(String[] args){
-	    //Keeps track of all orders
-	    //Takes Orders
-	    //Modifies/manipulates all other classes
+		BurritoStand s1 = new BurritoStand();
+		s1.getOrder(); 
+		s1.checkout(); 
+	
 		
 		
 		//Ingredient List
@@ -67,10 +69,5 @@ public class BurritoStand {
 	
 	
 	
-	public static void main (String [] args) 
-	{
-		BurritoStand s1 = new BurritoStand();
-		s1.getOrder(); 
-		s1.checkout(); 
-	}
+
 }
