@@ -1,7 +1,16 @@
 
 public class Burrito {
 		private String[] choices;
+		private double price;
+		
 	
+	//default Contstructor 
+	public Burrito()
+	{
+		price = 0; 
+		choices = ""; 
+		
+	}
 	
 	public double calcPrice()
 	{
