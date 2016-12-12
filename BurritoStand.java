@@ -33,17 +33,17 @@ public class BurritoStand {
 	Ingredient cheese = new Ingredient("Cheese" , 0.90); 
 	}
 	
-	public static void takeOrder(){
+	public static void getOrder(){
 		//Asks number of Burritos and the initializes the BurritoList[] as an array of Burritos of that size.
 		int numBurritos = 0;
 		System.out.println("How many burritos would you like?");
 		numBurritos = reader.next(); 
-		Burrito [] totOrder = new Burrito[numBurritos];//This array of burritos will contain all the burritos the customer wants
+		Order [] customerOrder = new Order[numBurritos];//This array of burritos will contain all the burritos the customer wants
 			
 		for(int i = 0; i <= numBurritos; i++)
 		{
-			Burrito i = new Burrito();
-			i.order(); //Calls the Order class to figure out which ingredients the customer wants; 
+			Order i = new Order();
+			i.takeOrder(); //Calls the Order class to figure out which ingredients the customer wants; 
 			totOrder[i] = cook(i.order()); //<------------------- Which???
 		}
 			
@@ -65,6 +65,6 @@ public class BurritoStand {
 	public static void main (String [] args) 
 	{
 		BurritoStand s1 = new BurritoStand();
-		s1.takeOrder(); 
+		s1.getOrder(); 
 	}
 }
