@@ -7,20 +7,13 @@ public class Order {
 	public int totalPrice;
 	
 	public void takeOrder(){
-		Ingredients[] ingredientsList = new Ingredients[7];
-		
-		
-		
 		Scanner reader = new Scanner(System.in);
-		
 		String customerWants[] = new String[7]; //String ("Queue") of ingredients the customer wants
 		
-		
-		System.out.println("Hello. What is you customerName? ");
-		customerName = reader.next(); 
+		//
 		System.out.println("Would you like a burrito? (yes or no)");
 		String wantBurrito = reader.next(); 
-		if(wantBurrito.equals("no"))
+		if(wantBurrito.equals("no")) //if no should end the loop within take order (in the Burrito stand class) 
 			System.out.println("OK BYE.");
 		else
 		{
