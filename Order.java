@@ -25,22 +25,22 @@ public class Order {
 		else
 		{
 			//Getting ingredients the Customer wants 
-		System.out.println("Sounds good! I will now ask you what ingredients you want. If you do not want any of the options I give you you can reply with none");
-		System.out.println("Please only select one choice from each options list.");
-		System.out.println("What type of tortilla would you like? We have Wheat, White or a bowl."); 
-		customerWants[0] = reader.next();
-		System.out.println("What type of meat would you like? We have Chicken, pork, chorizo, ground beef, carne asada or vegetables");
-		customerWants[1] = reader.next();
-		System.out.println("What kind of rice would you like? We have white, or brown");
-		customerWants[2] = reader.next();
-		System.out.println("What type of beans would you like? We have black, pinto, or refried"); 
-		customerWants[3] = reader.next();
-		System.out.println("What type of Salsa would you like? We have pico de gallo, mild, medium, or hot");
-		customerWants[4] = reader.next();
-		System.out.println("What type of Vegetable would you like? We have lettuce, tomato or peppers and onions");
-		customerWants[5] = reader.next();
-		System.out.println("Would you like any extras? We have guacamole, sour cream, or cheese");
-		customerWants[6] = reader.next();
+	System.out.println("Sounds good! I will now ask you what ingredients you want. If you do not want any of the options I give you you can reply with none");
+	System.out.println("Please only select one choice from each options listed and type the corresponding number");
+	System.out.println("What type of tortilla would you like? We have (1)Wheat, (2)White or (3)a bowl."); 
+	customerWants[0] = this.takeUserInput(); 
+	System.out.println("What type of meat would you like? We have (1)Chicken, (2)pork, (3)chorizo, (4)ground beef, (5)carne asada or (6)vegetables");
+	customerWants[1] = this.takeUserInput();
+	System.out.println("What kind of rice would you like? We have (1)white, or (2)brown");
+	customerWants[2] = this.takeUserInput();
+	System.out.println("What type of beans would you like? We have (1)black, (2)pinto, or (3)refried"); 
+	customerWants[3] = this.takeUserInput();
+	System.out.println("What type of Salsa would you like? We have (1)pico de gallo, (2)mild, (3)medium, or (4)hot");
+	customerWants[4] = this.takeUserInput();
+	System.out.println("What type of Vegetable would you like? We have (1)lettuce, (2)tomato or (3)peppers and onions");
+	customerWants[5] = this.takeUserInput();
+	System.out.println("Would you like any extras? We have (1)guacamole, (2)sour cream, or (3)cheese");
+	customerWants[6] = this.takeUserInput();
 		
 		reader.close();
 		}
