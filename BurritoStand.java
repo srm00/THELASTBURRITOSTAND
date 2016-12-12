@@ -41,8 +41,8 @@ public class BurritoStand {
 			
 		for(int i = 0; i <= numBurritos; i++)
 		{
-			Burrito i = newBurrito();
-			burrito.order(); 
+			Burrito i = new Burrito();
+			i.order(); 
 		}
 			
 	}
