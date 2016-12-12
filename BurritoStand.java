@@ -48,6 +48,7 @@ public class BurritoStand {
 			
 	}
 	
+	//"Cooks" the burritos by removing all blanks within the array
 	public burrito[] cook(burrito[] a) 
 		{
 			int count = 0;
@@ -62,6 +63,8 @@ public class BurritoStand {
 			}
 		}
 	
+	//calculates the prices for all ordered burriots 
+	//uses the calc price method within order
 	public static void checkout(burrito[] a){
 		double totalPrice = 0.0; 
 		for(int i = 0; i< a.length; i++)
@@ -69,5 +72,10 @@ public class BurritoStand {
 			totalPrice = totalPrice + a[i].calcPrice();
 		}
 		System.out.println("Your total is " + totalPrice + "$. Thank you for coming!"); 
+	}
+	
+	public static void main (String [] args) 
+	{
+		takeOrder(); 
 	}
 }
