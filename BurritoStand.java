@@ -42,11 +42,15 @@ public class BurritoStand {
 			
 		for(int i = 0; i <= numBurritos; i++)
 		{
-			Order i = new Order();
-			i.takeOrder(); //Calls the Order class to figure out which ingredients the customer wants; 
-			totOrder[i] = cook(i.order()); //<------------------- Which???
+			int x = i;
+			Order x = new Order();
+			x.takeOrder(); //Calls the Order class to figure out which ingredients the customer wants; 
+			totOrder[i] = cook(x); 
+			//print the order
+			System.out.println("Here is this completed burrito. It contains the following ingredients: "); 
+			printBurrito(x); 
 		}
-			
+	
 	}
 	
 	
@@ -66,5 +70,6 @@ public class BurritoStand {
 	{
 		BurritoStand s1 = new BurritoStand();
 		s1.getOrder(); 
+		s1.checkout(); 
 	}
 }
