@@ -76,6 +76,7 @@ public class BurritoStand {
 	
 	public static void main (String [] args) 
 	{
-		takeOrder(); 
+		BurritoStand s1 = new BurritoStand();
+		s1.takeOrder(); 
 	}
 }
