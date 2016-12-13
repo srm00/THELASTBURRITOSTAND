@@ -161,29 +161,7 @@ public class BurritoStand{
 				}else{
 					validInput = true;
 				}
-		}	
-		
-		
-		/**
-		while(!validInput){
-			if(keyboard.hasNextInt()){
-				x=keyboard.nextInt();
-				if(x <= maxChoices){
-					validInput = true;
-				}else{
-					System.out.println("Please input a valid choice from 0 to " + maxChoices);
-					keyboard.next();
-				}
-			}else{
-				System.out.println("Please input an integer");
-				keyboard.next();
-				
-				keyboard.close();
-				keyboard = new Scanner(System.in);
-				
-			}
-		}*/
-		//keyboard.close();
+		}
 		return x;
 	}
 }
