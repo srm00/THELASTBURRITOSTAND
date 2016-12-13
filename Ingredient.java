@@ -3,7 +3,7 @@ public class Ingredient {
 	private double price;
 	
 	//constructor, takes in a name and a price
-	public Ingredients(String str, double x){
+	public Ingredient(String str, double x){
 		this.setName(str);
 		this.setPrice(x);
 	}
@@ -13,7 +13,7 @@ public class Ingredient {
 	}
 	
 	public String getName(){
-		return name; 
+		return name;
 	}
 	
 	public void setPrice(double x){
