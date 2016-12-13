@@ -1,4 +1,0 @@
-# THELASTBURRITOSTAND
-
-Hi Emmeline
--Sean
