@@ -1,15 +1,13 @@
-
 import java.util.Scanner;
 
 public class Order {
 	
 	
 	public String customerName;
-	//public Burrito[] burritoList;  <---------------do we need these?
-	//public int orderNumber;
-	//public int totalPrice;  //calc price is within burrito 
-	
-	
+	public Burrito[] burritoList;
+	public int totalPrice;
+	 
+	/** Should happen in BurritoStand
 	public void getOrder(){
 		Scanner reader = new Scanner(System.in); 
 		
@@ -30,9 +28,13 @@ public class Order {
 			printBurrito(x); 
 		}
 	}
+	*/
 	
 	//calculates the prices for all ordered burriots 
 	//uses the calc price method within order
+	
+	/**
+	 * An Order can't "Check out" itself, it needs to be manipulated through BurritoStand
 		public static void checkout(Burrito[] a){
 			double totalPrice = 0.0; 
 			for(int i = 0; i< a.length; i++)
@@ -41,11 +43,27 @@ public class Order {
 			}
 			System.out.println("Your total is " + totalPrice + "$. Thank you for coming!"); 
 		}
+		*/
+	
+	//Instead, this just calculates the total price by adding the prices of all the burritos in the order
+	public boolean updateTotalPrice(){
+		totalPrice = 0; //resets total price
+		
+		//sums prices of all burritos
+		for(int i = 0; i< burritoList.length; i++)
+		{
+			totalPrice+=burritoList[i].calcPrice();
+		}
+		
+		//price has been successfully updated, so return true;
+		return true;
+	}
 	
 	
 	
 	
-	
+	/**
+	 * Same thing, this has to be done through burrito stand.
 	private void takeOrder(){
 		Scanner reader = new Scanner(System.in);
 		String customerWants[] = new String[7]; //String ("Queue") of ingredients the customer wants
@@ -78,6 +96,7 @@ public class Order {
 		reader.close();
 		}
 	}
+	*/
 	
 	//Helper method to print out the burrito 
 			public void printBurrito(String[] a)
