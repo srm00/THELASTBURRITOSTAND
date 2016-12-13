@@ -31,7 +31,7 @@ public class Burrito {
 	    double temp2 = temp; 
 	    price = (double)(price/(int)100);
 	     price = price + (temp2 / 100);
-	    System.out.println("Price:" + price);
+	    
 		return price; 
 	}
 
