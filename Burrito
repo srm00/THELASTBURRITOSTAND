@@ -11,28 +11,37 @@ public class Burrito {
 	
 	public double calcPrice()
 	{
-		price = 0; 
-		MaxHeap1 priceHeap = new MaxHeap1(8);
+		Queue prices = choices;
 		
-		for(int i = 0; i<choices.length; i++)
-		{
-		priceHeap.insert(this.getPrice(choices[i])); 
+		
+		price = 0; 
+		MaxHeap1 priceHeap = new MaxHeap1(30);
+		
+		while(choices.isEmpty() == false)
+		{ //multiply by 100 to convert all decimals to ints
+		priceHeap.insert((int)(100*(prices.pop()).getPrice())); 
 		}
 		
 		price = priceHeap.deleteMax(); 
 		price = price + priceHeap.deleteMax(); 
 	    price = price + priceHeap.deleteMax();
 		
-
+	    //to convert back to a double
+	    int temp = (int)price%100; //this will be the part after the decimal 
+	    double temp2 = temp; 
+	    price = (double)(price/(int)100);
+	     price = price + (temp2 / 100);
+	    System.out.println("Price:" + price);
 		return price; 
 	}
+
 	
 	//"Cooking" the burrito--> adding it to a new string without blanks("none") 
 	//The returned string array should become the choices array for what the customer wanted
 	public String[] cook(Order[] a) 
 	{
 		int count = 0;
-		String cookedBurrito[] = new String[7];
+		String cookedBurrito[] = new String[8];
 		for(int i = 0; i< a.length; i++)
 			{
 				if(!a[i].equals("none")) //if a[i] is not none 
