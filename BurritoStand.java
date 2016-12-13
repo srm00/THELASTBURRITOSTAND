@@ -13,7 +13,7 @@ public class BurritoStand{
 		final int MAXBURRITOS = 3;
 		newOrder.burritoList = new Burrito[takeUserInput(MAXBURRITOS)];
 		
-		for(int i = 0; i < newOrder.burritoList.length; i++){
+		for(int i = 0; i <= newOrder.burritoList.length; i++){
 			newOrder.burritoList[i].choices = pickIngredients();
 		}
 		
@@ -143,19 +143,24 @@ public class BurritoStand{
 		
 		Scanner keyboard = new Scanner(System.in);
 		
+		if(!keyboard.hasNext()){
+			System.out.println("Crap sorry no luck.");
+			System.exit(0);
+		}
+		
 		while(!validInput){
-			if (keyboard.hasNextInt()){
-				x = keyboard.nextInt(); 
-			}else{
-				keyboard.next();
-				x = -1;
-			}
+				if (keyboard.hasNextInt()){
+					x = keyboard.nextInt(); 
+				}else{
+					keyboard.next();
+					x = -1;
+				}
 			
-			if(x<0 || x > maxChoices){
-				System.out.println("Please enter an integer between 0 and " + maxChoices);
-			}else{
-				validInput = true;
-			}
+				if(x<0 || x > maxChoices){
+					System.out.println("Please enter an integer between 0 and " + maxChoices);
+				}else{
+					validInput = true;
+				}
 		}	
 		
 		
@@ -178,7 +183,7 @@ public class BurritoStand{
 				
 			}
 		}*/
-		keyboard.close();
+		//keyboard.close();
 		return x;
 	}
 }
