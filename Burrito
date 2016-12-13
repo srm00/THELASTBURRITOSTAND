@@ -1,20 +1,17 @@
 public class Burrito {
-		private String[] choices;
+		public Queue choices;
 		private double price;
 		
 	
 	//default Constructor 
 	public Burrito()
 	{
-		price = 0; 
-		choices[0] = ""; 
-		
+		price = 0;
 	}
 	
 	public double calcPrice()
 	{
-		
-		double price = 0; 
+		price = 0; 
 		MaxHeap1 priceHeap = new MaxHeap1(8);
 		
 		for(int i = 0; i<choices.length; i++)
