@@ -8,10 +8,11 @@ public class BurritoStand{
  		
  		for(int i = 0; i < currentOrder.burritoList.length; i++){
  			System.out.println("I will now cook burrito number " + (i + 1) + "!");
- 			cook(currentOrder.burritoList[i].choices);
+ 			currentOrder.burritoList[i].checkoutQueue = cook(currentOrder.burritoList[i].choices);
  		}
  		
- 		System.out.println("Time to check out! Your total is: $" + currentOrder.updatePrice());
+ 		currentOrder.updateTotalPrice();
+ 		System.out.println("Time to check out! Your total is: $" + currentOrder.totalPrice + "0");
 	}
 	
 	public static Order takeOrder(){
@@ -49,9 +50,9 @@ public class BurritoStand{
  		final Ingredient mild = new Ingredient("Mild", 0.4); 
  		final Ingredient medium = new Ingredient("Medium", 0.4); 
  		final Ingredient hot = new Ingredient("Hot", 0.4); 
- 		final Ingredient lettuce = new Ingredient("Lettuce", 0.75); 
- 		final Ingredient tomato = new Ingredient("Tomato", 0.75); 
- 		final Ingredient peppersAndOnions = new Ingredient("Peppers & Onion",  0.75); 
+ 		final Ingredient lettuce = new Ingredient("Lettuce", 0.70); 
+ 		final Ingredient tomato = new Ingredient("Tomato", 0.70); 
+ 		final Ingredient peppersAndOnions = new Ingredient("Peppers & Onion",  0.70); 
  		final Ingredient guacamole = new Ingredient("Guacamole", 1.90); 
  		final Ingredient sourCream = new Ingredient("Sour Cream", 0.90); 
  		final Ingredient cheese = new Ingredient("Cheese" , 0.90);
@@ -60,8 +61,8 @@ public class BurritoStand{
 		
 		Queue pickedIngredients = new Queue();
 		
-		System.out.println("Sounds good! I will now ask you what ingredients you want. \nIf you do not want any of the options I give you you can reply with (0) for none");
-		System.out.println("Please only select one choice from each options listed and type the corresponding number"\n);
+		System.out.println("Sounds good! I will now ask you what ingredients you want. \nIf you do not want any of the options I give you you can reply with (0) for none.");
+		System.out.println("Please only select one choice from each options listed and type the corresponding number \n\n");
 		
 		
 		System.out.println("What type of tortilla would you like? We have (1)Wheat, (2)White or (3)a bowl."); 
@@ -136,14 +137,20 @@ public class BurritoStand{
 		return pickedIngredients;
 	}
 	
-	public static boolean cook(Queue choices){
-		Queue ingredients = choices;
+	public static Queue cook(Queue choices){
 		System.out.println("Now adding the...");
-		while(!ingredients.isEmpty()){
-			 System.out.println(ingredients.pop().getName());
-			 try {Thread.sleep(1000);}catch(InterruptedException ex) {/*Thread.currentThread().interrupt();*/}
+		Queue checkoutQueue = new Queue();
+		
+		while(!choices.isEmpty()){
+			//pops the ingredient off of the choices queue and on to the checkout queue.
+			Ingredient currentIngredient = choices.pop();
+			checkoutQueue.push(currentIngredient);
+			
+			System.out.println(currentIngredient.getName());
+			try {Thread.sleep(1000);}catch(InterruptedException ex) {/*Thread.currentThread().interrupt();*/}
 		}
-		return true;
+		
+		return checkoutQueue;
 	}
 	
 	
@@ -152,11 +159,6 @@ public class BurritoStand{
 		int x=0;
 		
 		Scanner keyboard = new Scanner(System.in);
-		
-		if(!keyboard.hasNext()){
-			System.out.println("Crap sorry no luck.");
-			System.exit(0);
-		}
 		
 		while(!validInput){
 				if (keyboard.hasNextInt()){
