@@ -1,10 +1,10 @@
 
-public class MaxHeap1 {
+public class MaxHeap {
 		private int[] array;
 		private int currentSize; 
 		private int maximum; 
 		
-	    public MaxHeap1( int capacity )
+	    public MaxHeap( int capacity )
 	    {
 	        this.maximum = capacity;
 	    	this.currentSize = 0;
