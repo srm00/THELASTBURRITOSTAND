@@ -13,7 +13,8 @@ public class BurritoStand{
 		final int MAXBURRITOS = 3;
 		newOrder.burritoList = new Burrito[takeUserInput(MAXBURRITOS)];
 		
-		for(int i = 0; i <= newOrder.burritoList.length; i++){
+		for(int i = 0; i < newOrder.burritoList.length; i++){
+			newOrder.burritoList[i] = new Burrito();
 			newOrder.burritoList[i].choices = pickIngredients();
 		}
 		
