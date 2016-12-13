@@ -11,7 +11,7 @@ public class BurritoStand{
  			cook(currentOrder.burritoList[i].choices);
  		}
  		
- 		
+ 		System.out.println("Time to check out! Your total is: $" + currentOrder.updatePrice());
 	}
 	
 	public static Order takeOrder(){
