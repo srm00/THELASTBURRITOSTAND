@@ -1,4 +1,5 @@
 
+
 import java.util.Scanner;
 
 public class Order {
@@ -11,7 +12,7 @@ public class Order {
 	
 
 	//Instead, this just calculates the total price by adding the prices of all the burritos in the order
-	public boolean updateTotalPrice(){
+	public double updateTotalPrice(){
 		totalPrice = 0; //resets total price
 		
 		//sums prices of all burritos
@@ -22,7 +23,7 @@ public class Order {
 		
 		//price has been successfully updated, so return true;
 		System.out.println("Total Price: " +  totalPrice);
-		return true;
+		return totalPrice;
 	}
 	
 	
