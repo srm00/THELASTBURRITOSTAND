@@ -1,0 +1,94 @@
+Generated output
+
+
+
+
+Welcome to Emmeline and Sean's Burrito Stand!
+How many burritos would you like?
+3
+Sounds good! I will now ask you what ingredients you want. 
+If you do not want any of the options I give you you can reply with (0) for none.
+Please only select one choice from each options listed and type the corresponding number 
+
+
+What type of tortilla would you like? We have (1)Wheat, (2)White or (3)a bowl.
+1
+What type of meat would you like? We have (1)Chicken, (2)pork, (3)chorizo, (4)ground beef, (5)carne asada or (6)vegetables
+2
+What kind of rice would you like? We have (1)white, or (2)brown
+2
+What type of beans would you like? We have (1)black, (2)pinto, or (3)refried
+3
+What type of Salsa would you like? We have (1)pico de gallo, (2)mild, (3)medium, or (4)hot
+2
+What type of Vegetable would you like? We have (1)lettuce, (2)tomato or (3)peppers and onions
+2
+Would you like any extras? We have (1)guacamole, (2)sour cream, or (3)cheese
+1
+Sounds good! I will now ask you what ingredients you want. 
+If you do not want any of the options I give you you can reply with (0) for none.
+Please only select one choice from each options listed and type the corresponding number 
+
+
+What type of tortilla would you like? We have (1)Wheat, (2)White or (3)a bowl.
+3
+What type of meat would you like? We have (1)Chicken, (2)pork, (3)chorizo, (4)ground beef, (5)carne asada or (6)vegetables
+2
+What kind of rice would you like? We have (1)white, or (2)brown
+1
+What type of beans would you like? We have (1)black, (2)pinto, or (3)refried
+2
+What type of Salsa would you like? We have (1)pico de gallo, (2)mild, (3)medium, or (4)hot
+3
+What type of Vegetable would you like? We have (1)lettuce, (2)tomato or (3)peppers and onions
+2
+Would you like any extras? We have (1)guacamole, (2)sour cream, or (3)cheese
+1
+Sounds good! I will now ask you what ingredients you want. 
+If you do not want any of the options I give you you can reply with (0) for none.
+Please only select one choice from each options listed and type the corresponding number 
+
+
+What type of tortilla would you like? We have (1)Wheat, (2)White or (3)a bowl.
+1
+What type of meat would you like? We have (1)Chicken, (2)pork, (3)chorizo, (4)ground beef, (5)carne asada or (6)vegetables
+1
+What kind of rice would you like? We have (1)white, or (2)brown
+2
+What type of beans would you like? We have (1)black, (2)pinto, or (3)refried
+2
+What type of Salsa would you like? We have (1)pico de gallo, (2)mild, (3)medium, or (4)hot
+1
+What type of Vegetable would you like? We have (1)lettuce, (2)tomato or (3)peppers and onions
+1
+Would you like any extras? We have (1)guacamole, (2)sour cream, or (3)cheese
+2
+Great choices!
+I will now cook burrito number 1!
+Now adding the...
+Wheat Tortilla
+Pork
+Brown Rice
+Refried Beans
+Mild
+Tomato
+Guacamole
+I will now cook burrito number 2!
+Now adding the...
+Bowl
+Pork
+White Rice
+Pinto Beans
+Medium
+Tomato
+Guacamole
+I will now cook burrito number 3!
+Now adding the...
+Wheat Tortilla
+Chicken
+Brown Rice
+Pinto Beans
+Pico de gallo
+Lettuce
+Sour Cream
+Time to check out! Your total is: $23.80
